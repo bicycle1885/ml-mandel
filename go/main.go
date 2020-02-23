@@ -52,5 +52,4 @@ func main() {
 	div := parseArg(2, 8)
 	fmt.Println("rep=", rep, "  div=", div)
 	fmt.Println("result=", countMandel(rep, div))
-
 }

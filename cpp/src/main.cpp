@@ -4,17 +4,17 @@
 bool is_mandel(int rep, std::int64_t lim, std::int64_t x, std::int64_t y) {
   using i_t = std::int64_t;
   i_t zr = 0;
-  i_t zc = 0;
+  i_t zi = 0;
   for (int i = 0; i < rep; ++i) {
     // z* = z**2 + c
-    i_t zr_ = zr * zr / lim - zc * zc / lim + x;
-    i_t zc_ = zr * zc * 2 / lim + y;
-    i_t dist2 = zr_ * zr_ / lim + zc_ * zc_ / lim;
+    i_t zr_ = zr * zr / lim - zi * zi / lim + x;
+    i_t zi_ = zr * zi * 2 / lim + y;
+    i_t dist2 = zr_ * zr_ / lim + zi_ * zi_ / lim;
     if (4 * lim < dist2) {
       return false;
     }
     zr = zr_;
-    zc = zc_;
+    zi = zi_;
   }
   return true;
 }

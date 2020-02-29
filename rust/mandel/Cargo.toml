@@ -4,3 +4,7 @@ version = "0.1.0"
 authors = ["Nabetani <takenori@nabetani.sakura.ne.jp>"]
 
 [dependencies]
+
+[profile.release]
+opt-level = 2
+lto = true

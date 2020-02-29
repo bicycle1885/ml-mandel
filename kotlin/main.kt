@@ -1,5 +1,3 @@
-
-
 fun isMandel(rep: Int, lim: Long, x: Long, y: Long): Boolean {
     var zr = 0L
     var zi = 0L

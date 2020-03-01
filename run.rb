@@ -4,9 +4,10 @@ CMDS = [
   [ "C++ with clang", ".", "./cpp/clang/ml-mandel-clang" ],
   [ "C++ with gcc", ".", "./cpp/gcc/ml-mandel-gcc" ],
   [ "go", ".", "./go/go" ],
-  [ "Swift5", "swift", "./main" ],
   [ "julia", "julia", "#{JULIA} main.jl" ],
   [ "kotlin","kotlin", "kotlin MainKt" ],
+  [ "Rust", "rust/mandel", "./target/release/mandel" ],
+  [ "Swift5", "swift", "./main" ],
 ]
 
 CMDS.each do |name, dir,cmd|

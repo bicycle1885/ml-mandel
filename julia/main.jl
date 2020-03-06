@@ -1,6 +1,6 @@
-function isMandel(rep::Int, lim::Int64, x::Int64, y::Int64)
-  zr::Int64 = 0
-  zi::Int64 = 0
+function isMandel(rep, lim, x, y)
+  zr = 0
+  zi = 0
   for i in 0:(rep-1)
     zrNext = div(zr*zr,lim) - div(zi*zi,lim) + x
     ziNext = div(zr*zi*2,lim) + y
@@ -15,10 +15,10 @@ function isMandel(rep::Int, lim::Int64, x::Int64, y::Int64)
 end
 
 function countMandel( rep, div )
-  lim::Int64 = 2^div
-  count::Int64 = 0
-  for y::Int64 in -lim:lim
-    for x::Int64 in -lim:lim
+  lim = 2^div
+  count = 0
+  for y in -lim:lim
+    for x in -lim:lim
       if (isMandel( rep, lim, x, y))
         count+=1
       end
